@@ -1,4 +1,4 @@
-package animals;
+package reester;
 
 public class Counter {
 
