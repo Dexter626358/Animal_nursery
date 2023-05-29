@@ -6,8 +6,8 @@ import java.util.List;
 public abstract class Pet extends Animal{
     protected String eyeColour;
 
-    public Pet(int number, String nickName, String breed, float weight, Date dateOfBirth, String colour, Boolean boosterShot, List<String> commands, String eyeColour) {
-        super(number, nickName, breed, weight, dateOfBirth, colour, boosterShot, commands);
+    public Pet(int number, String typeOfAnimal, String nickName, String breed, float weight, String dateOfBirth, String colour, Boolean boosterShot, List<String> commands, String status, String dateOfStatus, String eyeColour) {
+        super(number, typeOfAnimal, nickName, breed, weight, dateOfBirth, colour, boosterShot, commands, status, dateOfStatus);
         this.eyeColour = eyeColour;
     }
 }

@@ -3,20 +3,22 @@ package animals;
 import java.util.Date;
 import java.util.List;
 
-public abstract class Animal {
+public abstract class Animal implements printAnimal {
     protected int number;
+    protected String typeOfAnimal;
     protected String nickName;
     protected String breed;
     protected float weight;
-    protected Date dateOfBirth;
+    protected String dateOfBirth;
     protected String colour;
     protected Boolean boosterShot;
     protected List<String> commands;
     protected String status;
-    protected Date dateOfStatus;
+    protected String dateOfStatus;
 
-    public Animal(int number, String nickName, String breed, float weight, Date dateOfBirth, String colour, Boolean boosterShot, List<String> commands) {
+    public Animal(int number, String typeOfAnimal, String nickName, String breed, float weight, String dateOfBirth, String colour, Boolean boosterShot, List<String> commands, String status, String dateOfStatus) {
         this.number = number;
+        this.typeOfAnimal = typeOfAnimal;
         this.nickName = nickName;
         this.breed = breed;
         this.weight = weight;
@@ -24,5 +26,7 @@ public abstract class Animal {
         this.colour = colour;
         this.boosterShot = boosterShot;
         this.commands = commands;
+        this.status = status;
+        this.dateOfStatus = dateOfStatus;
     }
 }
