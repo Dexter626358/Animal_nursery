@@ -1,6 +1,7 @@
 package userInterface;
 
 import animals.Animal;
+import reester.Counter;
 import reester.CreateAnimal;
 
 import java.util.ArrayList;

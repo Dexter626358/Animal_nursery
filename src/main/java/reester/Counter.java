@@ -1,10 +1,18 @@
 package reester;
 
 public class Counter {
-    protected int number = 1;
-    public int add(){
-        return number++;
+    private int count;
+
+    public Counter(){
+        count = 0;
     }
 
+    public void add() {
+        count++;
+    }
+
+    public int getCount(){
+        return count;
+    }
 
 }
