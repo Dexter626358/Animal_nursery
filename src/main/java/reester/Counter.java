@@ -1,18 +1,37 @@
 package reester;
 
-public class Counter {
-    private int count;
+import java.io.IOException;
+
+class Counter implements AutoCloseable{
+
+    private int counter;
+    private boolean isOpen;
+
+    public int getCounter(){
+        return counter;
+    }
 
     public Counter(){
-        count = 0;
+        this.counter = 0;
+        isOpen = true;
     }
 
-    public void add() {
-        count++;
+
+    public int add() throws closeCounterException{
+        if(!isOpen){
+            throw new closeCounterException("Счетчик закрыт");
+        }
+        return this.counter++;
     }
 
-    public int getCount(){
-        return count;
+    public void closeCounter(){
+        isOpen = false;
     }
 
+    @Override
+    public void close() {
+        closeCounter();
+
+    }
 }
+
