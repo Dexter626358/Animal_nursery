@@ -15,10 +15,9 @@ public class CreateAnimal {
     public Animal createAnimal() throws closeCounterException {
         int maxCarrying, numberOfHumps, speed;
         float weight;
-        String nickName, breed, dateOfBirth, colour, skills, status, dateOfStatus;
-        String eyeColour, typeOfFur, groupOfBreed, groupOfUsage, typeHamster, workingQualities, boosterShot;
+        String nickName = null, breed = null, dateOfBirth = null, colour = null, skills = null, status = null, dateOfStatus = null;
+        String eyeColour = null, typeOfFur = null, groupOfBreed = null, groupOfUsage = null, typeHamster = null, workingQualities = null, boosterShot = null;
         Animal animal = null;
-
         System.out.println("Введите название животного, котороое необходимо создать: ");
         String animalName = scan.nextLine().toLowerCase();
         if (animalName.equals("верблюд") || animalName.equals("кошка") || animalName.equals("собака") || animalName.equals("осел") || animalName.equals("лошадь") || animalName.equals("хомяк")) {
